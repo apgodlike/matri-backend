@@ -1,9 +1,9 @@
 import { Profile } from "../generated/prisma";
-import { prisma } from "../utils/prisma";
+import { prismaInstance } from "../utils/prisma";
 
 export const getProfiles = async (): Promise<Profile[] | null> => {
   try {
-    const profiles = await prisma.profile.findMany({
+    const profiles = await prismaInstance.profile.findMany({
       where: {
         isDeleted: false,
       },

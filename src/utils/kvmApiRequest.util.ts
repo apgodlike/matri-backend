@@ -25,6 +25,8 @@ export const kvmApiRequest = async (
     }
   );
 
+  console.log("KVM RESPONSE", response.data);
+
   const parsedResponse = KvmResponseSchema.parse(response.data);
 
   return parsedResponse;

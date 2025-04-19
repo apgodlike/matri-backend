@@ -1,7 +1,8 @@
 import { Router } from "express";
+import { updateLatestProfile } from "../controllers/profile.controller";
 
-const router = Router();
+const profileRouter = Router();
 
-router.get("/", (req, res) => {});
+profileRouter.get("/update-profiles", updateLatestProfile);
 
-export default router;
+export default profileRouter;
