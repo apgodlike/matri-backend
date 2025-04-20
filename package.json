@@ -4,9 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --respawn src/index.ts",
-    "build": "tsc",
-    "start": "node dist/index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.ts",
+    "dev": "nodemon src/index.ts",
+    "astart": "node dist/index.js",
+    "build": "prisma generate && tsc",
+    "postinstall": "prisma generate",
+    "debug": "DEBUG=express:* nodemon src/index.ts"
   },
   "author": "",
   "license": "ISC",
