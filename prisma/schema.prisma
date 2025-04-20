@@ -41,7 +41,7 @@ enum ProfileStatus {
 }
 
 model SecondaryProfile {
-   id        String  @id @default(cuid())
+  id        String  @id @default(cuid())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   name      String
@@ -64,6 +64,6 @@ model Picture {
   updatedAt DateTime @updatedAt
   url       String
   profileId String
-  profile   Profile @relation(fields: [profileId], references: [id])
+  profile   Profile @relation(fields: [profileId], references: [profileId])
 }
 
