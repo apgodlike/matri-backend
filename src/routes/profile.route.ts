@@ -1,8 +1,16 @@
 import { Router } from "express";
-import { updateLatestProfile } from "../controllers/profile.controller";
+import {
+  getAllProfiles,
+  updateLatestProfile,
+  updateShortlistProfile,
+} from "../controllers/profile.controller";
 
 const profileRouter = Router();
 
 profileRouter.get("/update-profiles", updateLatestProfile);
+
+profileRouter.get("/all-profiles", getAllProfiles);
+
+// profileRouter.get("/shortlist", getShortlistProfile);
 
 export default profileRouter;
